@@ -165,14 +165,24 @@ class GameVC: UIViewController {
     
          
     @IBAction func minusButton(_ sender: UIButton) {
-        rateCount -= 5
-        rateLabel.text = String(rateCount)
+        if rateCount == 0 {
+            
+        } else {
+            rateCount -= 10
+            rateLabel.text = String(rateCount)
+        }
+
         
     }
     
     @IBAction func plusButton(_ sender: UIButton) {
-        rateCount += 5
-        rateLabel.text = String(rateCount)
+        if rateCount >= totalCountCoin {
+            
+        } else {
+            rateCount += 10
+            rateLabel.text = String(rateCount)
+        }
+
         
     }
     
